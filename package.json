@@ -1,0 +1,22 @@
+{
+  "name": "bs-react-trello",
+  "version": "0.1.0",
+  "scripts": {
+    "changelog": "auto-changelog --template keepachangelog",
+    "bsb": "bsb -clean-world -make-world"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "homepage": "https://github.com/JakubMarkiewicz/bs-react-trello",
+  "author": "JakubMarkiewicz",
+  "license": "MIT",
+  "dependencies": {
+    "react-trello": "^2.1.4",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "bs-platform": "^5.0.3",
+    "reason-react": ">=0.7.0"
+  }
+}
