@@ -1,13 +1,20 @@
 {
   "name": "bs-react-trello",
   "version": "0.1.0",
+  "description": "Bucklescript bindings for react-trello",
+  "keywords": [
+    "BuckleScript",
+    "ReasonReact",
+    "Trello"
+  ],
   "scripts": {
     "changelog": "auto-changelog --template keepachangelog",
     "bsb": "bsb -clean-world -make-world"
   },
-  "keywords": [
-    "BuckleScript"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JakubMarkiewicz/bs-react-trello"
+  },
   "homepage": "https://github.com/JakubMarkiewicz/bs-react-trello",
   "author": "JakubMarkiewicz",
   "license": "MIT",
