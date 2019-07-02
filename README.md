@@ -1,4 +1,4 @@
-# bs-react-slick
+# [bs-react-trello](https://www.npmjs.com/package/bs-react-trello)
 
 This is [Bucklescript](https://bucklescript.github.io/) bindings for [react-trello](https://github.com/rcdexta/react-trello).
 
