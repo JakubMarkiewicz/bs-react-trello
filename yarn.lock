@@ -128,17 +128,17 @@
   resolved "https://npm.togedo.com/@emotion%2funitless/-/unitless-0.7.4.tgz#a87b4b04e5ae14a88d48ebef15015f6b7d1f5677"
   integrity sha512-kBa+cDHOR9jpRJ+kcGMsysrls0leukrm68DmFQoMIWQcXdr2cZvyvypWuGYT7U+9kAExUE7+T7r6G3C3A6L8MQ==
 
-"@terebentina/react-popover@^2.0.0":
-  version "2.0.0"
-  resolved "https://npm.togedo.com/@terebentina%2freact-popover/-/react-popover-2.0.0.tgz#46a46052a889d423646daa1057bbb07879d19908"
-  integrity sha1-RqRgUqiJ1CNkbaoQV7uweHnRmQg=
-
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://npm.togedo.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
   integrity sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==
   dependencies:
     color-convert "^1.9.0"
+
+autosize@^4.0.2:
+  version "4.0.2"
+  resolved "https://npm.togedo.com/autosize/-/autosize-4.0.2.tgz#073cfd07c8bf45da4b9fd153437f5bafbba1e4c9"
+  integrity sha512-jnSyH2d+qdfPGpWlcuhGiHmqBJ6g3X+8T+iRwFrHPLVcdoGJE/x6Qicm6aDHfTsbgZKxyV8UU/YB2p4cjKDRRA==
 
 "babel-plugin-styled-components@>= 1":
   version "1.10.5"
@@ -173,7 +173,7 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-classnames@^2.2.6:
+"classnames@>= 2.0", classnames@^2.2.6:
   version "2.2.6"
   resolved "https://npm.togedo.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
@@ -313,7 +313,7 @@ postcss-value-parser@^3.3.0:
   resolved "https://npm.togedo.com/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
   integrity sha512-pISE66AbVkp4fDQ7VHBwRNXzAAKJjw4Vw7nWI/+Q3vuly7SNfgYXvm6i5IgFylHGK5sP/xHAbB7N49OS4gWNyQ==
 
-prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://npm.togedo.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -321,9 +321,10 @@ prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
-react-dom@>=16.8.1:
+"react-dom@>= 16.3", react-dom@>=16.8.1:
   version "16.8.6"
   resolved "https://npm.togedo.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
+  integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -339,6 +340,17 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://npm.togedo.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-popopo@^2.1.9:
+  version "2.1.9"
+  resolved "https://npm.togedo.com/react-popopo/-/react-popopo-2.1.9.tgz#d93f70a8fb68227907d00c0cea4d8f5d321053ea"
+  integrity sha512-zXOpcLSpaLZmBxhdtenJzQPLjY81XknVS/tXH4Kv5BBrnYIUPHvVdGmS7+o9s7DjCzzdK7AdVwtG+FVSO0cZ8g==
+  dependencies:
+    classnames ">= 2.0"
+    prop-types "^15.7.2"
+    react ">= 16.3"
+    react-dom ">= 16.3"
+    styled-components ">= 4.0"
+
 react-redux@^5.0.7:
   version "5.1.1"
   resolved "https://npm.togedo.com/react-redux/-/react-redux-5.1.1.tgz#88e368682c7fa80e34e055cd7ac56f5936b0f52f"
@@ -352,16 +364,17 @@ react-redux@^5.0.7:
     react-is "^16.6.0"
     react-lifecycles-compat "^3.0.0"
 
-react-trello@^2.1.4:
-  version "2.1.4"
-  resolved "https://npm.togedo.com/react-trello/-/react-trello-2.1.4.tgz#921f56ef2cf0e0a5bdd5c35587b4e99c843da225"
-  integrity sha512-wAOMUgmDT5aIR1DeZqOIr4O91zGpIjEkqtRqplrQUf+8tCXDp288EwZV0PE1bYMulzyT/UBrv4hxOx3gHZqpOA==
+react-trello@^2.2.0:
+  version "2.2.0"
+  resolved "https://npm.togedo.com/react-trello/-/react-trello-2.2.0.tgz#51af8434acb57a1376bdc86e378c74d9f0a1310a"
+  integrity sha512-FY4H64YGSRgmtXQPVdUjVbyL5bs5e8qrsdlxuWXelz4rwOo77klr3N7y/9+HtQRPs/S5wpY8b1iulH8G1WbRJA==
   dependencies:
-    "@terebentina/react-popover" "^2.0.0"
+    autosize "^4.0.2"
     classnames "^2.2.6"
     immutability-helper "^2.8.1"
     lodash "^4.17.11"
-    prop-types "^15.6.2"
+    prop-types "^15.7.2"
+    react-popopo "^2.1.9"
     react-redux "^5.0.7"
     redux "^4.0.0"
     redux-actions "^2.6.1"
@@ -369,9 +382,10 @@ react-trello@^2.1.4:
     smooth-dnd "https://github.com/rcdexta/smooth-dnd"
     uuid "^3.3.2"
 
-react@>=16.8.1:
+"react@>= 16.3", react@>=16.8.1:
   version "16.8.6"
   resolved "https://npm.togedo.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
+  integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -428,16 +442,16 @@ scheduler@^0.13.6:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-"smooth-dnd@https://github.com/rcdexta/smooth-dnd":
+"smooth-dnd@git+https://github.com/rcdexta/smooth-dnd.git":
   version "0.6.3"
-  resolved "https://github.com/rcdexta/smooth-dnd#f13924c67bf6ffe4613d97bb1ee83f11d364eb1e"
+  resolved "git+https://github.com/rcdexta/smooth-dnd.git#f13924c67bf6ffe4613d97bb1ee83f11d364eb1e"
 
 source-map@^0.5.0:
   version "0.5.7"
   resolved "https://npm.togedo.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
 
-styled-components@^4.3.2:
+"styled-components@>= 4.0", styled-components@^4.3.2:
   version "4.3.2"
   resolved "https://npm.togedo.com/styled-components/-/styled-components-4.3.2.tgz#4ca81918c812d3006f60ac5fdec7d6b64a9509cc"
   integrity sha512-NppHzIFavZ3TsIU3R1omtddJ0Bv1+j50AKh3ZWyXHuFvJq1I8qkQ5mZ7uQgD89Y8zJNx2qRo6RqAH1BmoVafHw==
