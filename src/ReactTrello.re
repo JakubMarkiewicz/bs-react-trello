@@ -69,8 +69,9 @@ module Lane = {
     [@bs.optional]
     label: string,
     [@bs.optional]
-    addCardLink: React.element,
     cards: array(Card.t),
+    [@bs.optional]
+    disallowAddingCard: bool,
   };
 };
 
