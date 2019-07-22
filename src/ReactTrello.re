@@ -20,14 +20,11 @@
  onLaneAdd	function	Called when a new lane is added: onLaneAdd(params)
  onLaneDelete	function	Called when a lane is deleted onLaneDelete(laneId)
  onLaneClick	function	Called when a lane is clicked: onLaneClick(laneId). Card clicks are not propagated to lane click event
- addCardLink	node	Pass custom element to replace the Add Card link at the end of the lane (when board is editable)
- newCardTemplate	node	Pass a custom new card template to add new cards to a lane (when board is editable)
  hideCardDeleteIcon	boolean	Disable showing the delete icon to the top right corner of the card (when board is editable)
  laneSortFunction	function	Used to specify the logic to sort cards on a lane: laneSortFunction(card1, card2)
  eventBusHandle	function	This is a special function that providers a publishHook to pass new events to the board. See details in Publish Events section
  onDataChange	function	Called everytime the data changes due to user interaction or event bus: onDataChange(newData)
  style	object	Pass css style props to board container
- customCardLayout	boolean	Boolean to indicate a custom card template will be specified. Add the card component as child to Board
  customLaneHeader	element	Pass custom lane header as react component to modify appearance
  data	object	Actual board data in the form of json
  tagStyle	object	If cards have tags, use this prop to modify their style
@@ -77,6 +74,20 @@ module Lane = {
   };
 };
 
+[@bs.deriving abstract]
+type components = {
+  [@bs.optional] [@bs.as "AddCardLink"]
+  addCardLink: unit => React.element,
+  [@bs.optional] [@bs.as "CustomLaneHeader"]
+  customLaneHeader: React.element,
+  [@bs.optional] [@bs.as "NewCardForm"]
+  newCardForm: React.element,
+  [@bs.optional] [@bs.as "NewLaneSection"]
+  newLaneSection: React.element,
+  [@bs.optional] [@b.as "Card"]
+  card: React.element,
+};
+
 type data = {. "lanes": array(Lane.t)};
 
 [@bs.obj]
@@ -103,14 +114,11 @@ external makePropsTrello:
     ~onLaneAdd: Lane.t => unit=?,
     ~onLaneDelete: string => unit=?,
     ~onLaneClick: string => unit=?,
-    ~addCardLink: React.element=?,
-    ~newCardTemplate: React.element=?,
     ~hideCardDeleteIcon: React.element=?,
     ~laneSortFunction: (Card.t, Card.t) => unit=?,
+    ~components: components=?,
     // ~eventBusHandle:         TODO: bind
     // ~onDataChange:           TODO: bind
-    ~customCardLayout: bool=?,
-    ~customLaneHeader: React.element=?,
     ~data: data,
     ~tagStyle: ReactDOMRe.Style.t=?,
     ~id: string=?,
@@ -150,12 +158,9 @@ let make =
       ~onLaneDelete: option(string => unit)=?,
       ~onLaneAdd: option(Lane.t => unit)=?,
       ~onLaneClick: option(string => unit)=?,
-      ~addCardLink: option(React.element)=?,
-      ~newCardTemplate: option(React.element)=?,
       ~hideCardDeleteIcon: option(React.element)=?,
       ~laneSortFunction: option((Card.t, Card.t) => unit)=?,
-      ~customCardLayout: option(bool)=?,
-      ~customLaneHeader: option(React.element)=?,
+      ~components: option(components)=?,
       ~data: data,
       ~tagStyle: option(ReactDOMRe.Style.t)=?,
       ~id: option(string)=?,
@@ -187,14 +192,11 @@ let make =
       ~onLaneAdd?,
       ~onLaneDelete?,
       ~onLaneClick?,
-      ~addCardLink?,
-      ~newCardTemplate?,
       ~hideCardDeleteIcon?,
       ~laneSortFunction?,
+      ~components?,
       // ~eventBusHandle?,
       // ~onDataChange?,
-      ~customCardLayout?,
-      ~customLaneHeader?,
       ~tagStyle?,
       ~data,
       ~id?,
