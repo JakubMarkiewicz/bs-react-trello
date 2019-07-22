@@ -59,6 +59,8 @@ module Card = {
     draggable: bool,
     [@bs.optional]
     cardStyle: ReactDOMRe.Style.t,
+    [@bs.optional]
+    style: ReactDOMRe.Style.t,
   };
 };
 
