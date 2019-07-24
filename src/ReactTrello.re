@@ -76,6 +76,8 @@ module Lane = {
     cards: array(Card.t),
     [@bs.optional]
     disallowAddingCard: bool,
+    [@bs.optional]
+    style: ReactDOMRe.Style.t,
   };
 };
 
