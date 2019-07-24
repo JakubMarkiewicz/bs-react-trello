@@ -61,6 +61,8 @@ module Card = {
     cardStyle: ReactDOMRe.Style.t,
     [@bs.optional]
     style: ReactDOMRe.Style.t,
+    [@bs.optional]
+    className: string,
   };
 };
 
@@ -78,6 +80,8 @@ module Lane = {
     disallowAddingCard: bool,
     [@bs.optional]
     style: ReactDOMRe.Style.t,
+    [@bs.optional]
+    className: string,
   };
 };
 
@@ -93,6 +97,8 @@ type components = {
   newLaneSection: React.element,
   [@bs.optional] [@b.as "Card"]
   card: React.element,
+  [@bs.optional]
+  className: string,
 };
 
 type data = {. "lanes": array(Lane.t)};
