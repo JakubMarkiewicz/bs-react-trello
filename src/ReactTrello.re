@@ -95,7 +95,7 @@ type components = {
   newCardForm: React.element,
   [@bs.optional] [@bs.as "NewLaneSection"]
   newLaneSection: React.element,
-  [@bs.optional] [@b.as "Card"]
+  [@bs.optional] [@bs.as "Card"]
   card: React.element,
   [@bs.optional]
   className: string,
