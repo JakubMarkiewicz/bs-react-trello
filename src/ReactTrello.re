@@ -63,6 +63,28 @@ module Card = {
     style: ReactDOMRe.Style.t,
     [@bs.optional]
     className: string,
+    [@bs.optional]
+    showDeleteButton: bool,
+    [@bs.optional]
+    onDelete: string => unit,
+  };
+};
+
+module NewCardForm = {
+  [@bs.deriving abstract]
+  type onAdd = {
+    [@bs.optional]
+    description: string,
+    [@bs.optional]
+    title: string,
+    [@bs.optional]
+    label: string,
+  };
+
+  type t = {
+    .
+    [@bs.meth] "onAdd": onAdd => unit,
+    [@bs.meth] "onCancel": unit => unit,
   };
 };
 
@@ -92,11 +114,11 @@ type components = {
   [@bs.optional] [@bs.as "CustomLaneHeader"]
   customLaneHeader: React.element,
   [@bs.optional] [@bs.as "NewCardForm"]
-  newCardForm: React.element,
+  newCardForm: NewCardForm.t => React.element,
   [@bs.optional] [@bs.as "NewLaneSection"]
   newLaneSection: React.element,
   [@bs.optional] [@bs.as "Card"]
-  card: React.element,
+  card: Card.t => React.element,
   [@bs.optional]
   className: string,
 };
