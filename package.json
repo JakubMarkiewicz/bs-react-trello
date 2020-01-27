@@ -1,6 +1,6 @@
 {
   "name": "bs-react-trello",
-  "version": "0.1.57",
+  "version": "0.1.58",
   "description": "Bucklescript bindings for react-trello",
   "keywords": [
     "BuckleScript",
