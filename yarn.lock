@@ -155,9 +155,10 @@ babel-plugin-syntax-jsx@^6.18.0:
   resolved "https://npm.togedo.com/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
   integrity sha1-CvMqmm4Tyno/1QaeYtew9Y0NiUY=
 
-bs-platform@^5.0.3:
-  version "5.0.4"
-  resolved "https://npm.togedo.com/bs-platform/-/bs-platform-5.0.4.tgz#d406ef43c12d1b19d8546884d8b5b4e0fb709372"
+bs-platform@^5.2.1:
+  version "5.2.1"
+  resolved "https://npm.togedo.com/bs-platform/-/bs-platform-5.2.1.tgz#3f76f6d4f4c7255296375a8104c8be332770b691"
+  integrity sha512-3ISP+RBC/NYILiJnphCY0W3RTYpQ11JGa2dBBLVug5fpFZ0qtSaL3ZplD8MyjNeXX2bC7xgrWfgBSn8Tc9om7Q==
 
 camelize@^1.0.0:
   version "1.0.0"
@@ -321,6 +322,10 @@ prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
+react-click-outside@tj/react-click-outside:
+  version "1.1.1"
+  resolved "https://codeload.github.com/tj/react-click-outside/tar.gz/a833ddc5be47490307f9fcc6ed09d8c353108510"
+
 "react-dom@>= 16.3", react-dom@>=16.8.1:
   version "16.8.6"
   resolved "https://npm.togedo.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
@@ -364,16 +369,17 @@ react-redux@^5.0.7:
     react-is "^16.6.0"
     react-lifecycles-compat "^3.0.0"
 
-react-trello@^2.2.0:
-  version "2.2.0"
-  resolved "https://npm.togedo.com/react-trello/-/react-trello-2.2.0.tgz#51af8434acb57a1376bdc86e378c74d9f0a1310a"
-  integrity sha512-FY4H64YGSRgmtXQPVdUjVbyL5bs5e8qrsdlxuWXelz4rwOo77klr3N7y/9+HtQRPs/S5wpY8b1iulH8G1WbRJA==
+react-trello@^2.2.3:
+  version "2.2.3"
+  resolved "https://npm.togedo.com/react-trello/-/react-trello-2.2.3.tgz#a8018c3b4812902b6030dc1ef3b8123c270ace5c"
+  integrity sha512-eB2BT3EJl7A30/+GcgKFnvhydSjMgzmvjPpx7MHgc5gmUuK2sbEzpNXtx9p7/eQC5dd10T7pnQa2muURp6ESCg==
   dependencies:
     autosize "^4.0.2"
     classnames "^2.2.6"
     immutability-helper "^2.8.1"
     lodash "^4.17.11"
     prop-types "^15.7.2"
+    react-click-outside tj/react-click-outside
     react-popopo "^2.1.9"
     react-redux "^5.0.7"
     redux "^4.0.0"
@@ -442,9 +448,9 @@ scheduler@^0.13.6:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-"smooth-dnd@git+https://github.com/rcdexta/smooth-dnd.git":
+"smooth-dnd@https://github.com/rcdexta/smooth-dnd":
   version "0.6.3"
-  resolved "git+https://github.com/rcdexta/smooth-dnd.git#f13924c67bf6ffe4613d97bb1ee83f11d364eb1e"
+  resolved "https://github.com/rcdexta/smooth-dnd#f13924c67bf6ffe4613d97bb1ee83f11d364eb1e"
 
 source-map@^0.5.0:
   version "0.5.7"

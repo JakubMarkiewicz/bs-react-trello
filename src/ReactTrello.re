@@ -107,10 +107,12 @@ module Lane = {
   };
 };
 
+type addCardLinkProps = {. "onClick": ReactEvent.Form.t};
+
 [@bs.deriving abstract]
 type components = {
   [@bs.optional] [@bs.as "AddCardLink"]
-  addCardLink: unit => React.element,
+  addCardLink: addCardLinkProps => React.element,
   [@bs.optional] [@bs.as "CustomLaneHeader"]
   customLaneHeader: React.element,
   [@bs.optional] [@bs.as "NewCardForm"]
