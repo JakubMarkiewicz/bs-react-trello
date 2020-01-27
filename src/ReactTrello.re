@@ -107,7 +107,7 @@ module Lane = {
   };
 };
 
-type addCardLinkProps = {. "onClick": ReactEvent.Mouse.t};
+type addCardLinkProps = {. "onClick": ReactEvent.Mouse.t => unit};
 
 [@bs.deriving abstract]
 type components = {
